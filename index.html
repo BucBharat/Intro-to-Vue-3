@@ -17,10 +17,15 @@
           <div class="product-image">
             <!-- image goes here -->
             <img v-bind:src="image" />
-            <a v-bind:href="url"> This is a link to amazon </a>
+            <!-- <a v-bind:href="url"> This is a link to amazon </a> -->
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <p v-if="inventory > 10">In stock</p>
+            <p v-else-if="inventory <= 10 && inventory > 0">
+              Very few left in stock
+            </p>
+            <p v-else>Out of stock</p>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ const app = Vue.createApp({
       product: 'Socks',
       image: './assets/images/socks_blue.jpg',
       url: 'https://www.amazon.in/',
+      inventory: 0,
     };
   },
 });
